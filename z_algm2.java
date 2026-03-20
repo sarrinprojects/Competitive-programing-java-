@@ -1,14 +1,14 @@
 import java.util.Scanner;
-public class z_algm{
+public class z_algm2{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-         System.out.println("enter the text");
-        String text = sc.next();
+        System.out.println("enter the text");
+        String text = sc.nextLine();
         System.out.println("enter the pattern");
-        String pattern = sc.next();
+        String pattern = sc.nextLine();
         
 
-        boolean found = false;
+        int count = 0;
 
         for (int i = 0; i <= text.length() - pattern.length(); i++){
                 int j;
@@ -18,19 +18,13 @@ public class z_algm{
                     }
                 }
                 if (j == pattern.length()){
-                    found = true;
-                    break;
+                   count ++;
                 }
             }
-                if (found){
-                    System.out.println("pattern found");
-                } else {
-                    System.out.println("not found");
-                }
+                
         
-        
+        System.out.println(count);
         sc.close();
                 
     }
   }
-    
